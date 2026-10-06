@@ -3,9 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Manual Budgeting</title>
 </head>
 <body>
-    
+
+    <h1>Tambah Transaksi</h1>
+
+    <form>
+
+        <table>
+            <tr>
+                <td><label for="judul">Judul Transaksi</label></td>
+                <td>
+                    <input type="text" id="judul" name="judul" placeholder="Contoh: Makan Siang">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="kategori">Kategori</label></td>
+                <td>
+                    <select id="kategori" name="kategori">
+                        <option value="">Pilih Kategori</option>
+                        <option value="makanan">Makanan</option>
+                        <option value="transportasi">Transportasi</option>
+                        <option value="belanja">Belanja</option>
+                        <option value="hiburan">Hiburan</option>
+                        <option value="tagihan">Tagihan</option>
+                        <option value="kesehatan">Kesehatan</option>
+                        <option value="lainnya">Yang Lain...</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="harga">Jumlah Pengeluaran</label></td>
+                <td>
+                    <input type="number" id="harga" name="harga" placeholder="Contoh: 25000">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="tanggal">Tanggal Transaksi</label></td>
+                <td>
+                    <input type="date" id="tanggal" name="tanggal">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="pembayaran">Metode Pembayaran</label></td>
+                <td>
+                    <select id="pembayaran" name="pembayaran">
+                        <option value="">Pilih Metode Pembayaran</option>
+                        <option value="cash">Cash</option>
+                        <option value="debit">Debit Card</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="ewallet">E-Wallet</option>
+                        <option value="transfer">Bank Transfer</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="catatan">Catatan</label></td>
+                <td>
+                    <textarea id="catatan" name="catatan" placeholder="Tambahkan catatan (opsional)"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <button type="submit">Simpan Transaksi</button>
+        <button type="reset">Batal</button>
+
+    </form>
+
 </body>
 </html>

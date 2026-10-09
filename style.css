@@ -1,0 +1,167 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #1C1204;
+    background-color: #E8DCC4;
+    margin: 0;
+}
+
+header {
+    background-color: #123F36;
+    color: #E8DCC4;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: #E8DCC4;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.aktif {
+    color: #C49A45;
+}
+
+main {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h3 {
+    color: #2A6B5C;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.ringkasan {
+    display: flex;
+    gap: 15px;
+}
+
+.kotak {
+    background-color: #F7F2E8;
+    border: 1px solid #C49A45;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+.label {
+    display: block;
+    color: #2A6B5C;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.angka {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.sisa {
+    color: #2A6B5C;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #F7F2E8;
+    border: 1px solid #C49A45;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #2A6B5C;
+    color: #E8DCC4;
+    font-weight: bold;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #C49A45;
+}
+
+th:last-child,
+td:last-child {
+    text-align: right;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #EFE4CE;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .ringkasan {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .angka {
+        font-size: 24px;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

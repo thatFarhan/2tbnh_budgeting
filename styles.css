@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+/* 
+    Login Styles
+*/
 body {
     background-color: #E8DCC4;
     color: #1C1204;
@@ -89,5 +92,202 @@ body {
     
     .site-header h1 {
         font-size: 22px;
+    }
+}
+
+/* 
+    Upload Styles 
+*/
+.upload-container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.upload-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 48px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 20px 40px rgba(28, 18, 4, 0.08);
+    position: relative;
+}
+
+
+.upload-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 8px;
+    background: linear-gradient(90deg, #123F36 0%, #2A6B5C 50%, #C49A45 100%);
+    border-radius: 20px 20px 0 0;
+}
+
+.upload-card h2 {
+    color: #123F36;
+    margin: 0 0 8px 0;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+
+.upload-card .subtitle {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 800;
+    color: #2A6B5C;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group input:not([type="date"]),
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #1C1204;
+    font-weight: 600;
+    padding: 16px;
+    border: 2px solid #E8DCC4;
+    border-radius: 12px;
+    background-color: transparent;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.form-group select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 16px top 50%;
+    background-size: 12px auto;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.input-prefix:focus-within {
+    border-color: #C49A45;
+    box-shadow: 0 0 0 4px rgba(196, 154, 69, 0.1);
+    transform: translateY(-2px);
+}
+
+.input-prefix {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E8DCC4;
+    border-radius: 12px;
+    background-color: transparent;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-prefix span {
+    padding: 16px 20px;
+    background-color: rgba(196, 154, 69, 0.1);
+    color: #C49A45;
+    font-weight: 900;
+    font-size: 18px;
+    border-right: 2px solid #E8DCC4;
+    border-radius: 10px 0 0 10px;
+}
+
+.input-prefix input {
+    border: none !important;
+    border-radius: 0 10px 10px 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+    width: 100%;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    color: #123F36 !important;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.btn-submit {
+    background-color: #123F36;
+    color: #FFFFFF;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(18, 63, 54, 0.2);
+}
+
+.btn-submit:hover {
+    background-color: #2A6B5C;
+    box-shadow: 0 6px 16px rgba(42, 107, 92, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-cancel {
+    background-color: transparent;
+    color: #1C1204;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+    background-color: #E8DCC4;
+    color: #123F36;
+}
+
+@media screen and (max-width: 600px) {
+    .upload-card {
+        padding: 32px 20px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .form-actions {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .btn-submit, .btn-cancel {
+        width: 100%;
+        text-align: center;
     }
 }

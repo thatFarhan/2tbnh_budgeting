@@ -1,82 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Budgeting</title>
+    <title>Upload Transaksi</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>Tambah Transaksi</h1>
+    <header>
+        <h1>Budgeting App</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="upload.html">Upload</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
 
-    <form>
+    <main class="upload-container">
+        <section class="upload-card">
+            <h2>Tambah Transaksi Baru</h2>
+            <p class="subtitle">Catat pengeluaranmu dengan detail agar keuangan tetap terkontrol.</p>
 
-        <table>
-            <tr>
-                <td><label for="judul">Judul Transaksi</label></td>
-                <td>
-                    <input type="text" id="judul" name="judul" placeholder="Contoh: Makan Siang">
-                </td>
-            </tr>
+            <!-- Action melempar ke dashboard, tanpa atribut method (otomatis fallback ke GET) -->
+            <form action="dashboard.html">
+                
+                <div class="form-group">
+                    <label for="judul">Judul Transaksi</label>
+                    <input type="text" id="judul" name="judul" placeholder="Contoh: Makan Siang di Kantin" required>
+                </div>
 
-            <tr>
-                <td><label for="kategori">Kategori</label></td>
-                <td>
-                    <select id="kategori" name="kategori">
-                        <option value="">Pilih Kategori</option>
-                        <option value="makanan">Makanan</option>
-                        <option value="transportasi">Transportasi</option>
-                        <option value="belanja">Belanja</option>
-                        <option value="hiburan">Hiburan</option>
-                        <option value="tagihan">Tagihan</option>
-                        <option value="kesehatan">Kesehatan</option>
-                        <option value="lainnya">Yang Lain...</option>
-                    </select>
-                </td>
-            </tr>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="kategori">Kategori</label>
+                        <select id="kategori" name="kategori" required>
+                            <option value="" disabled selected>Pilih Kategori...</option>
+                            <option value="makanan">Makanan</option>
+                            <option value="transportasi">Transportasi</option>
+                            <option value="belanja">Belanja</option>
+                            <option value="hiburan">Hiburan</option>
+                            <option value="tagihan">Tagihan</option>
+                            <option value="kesehatan">Kesehatan</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                    </div>
 
-            <tr>
-                <td><label for="harga">Jumlah Pengeluaran</label></td>
-                <td>
-                    <input type="number" id="harga" name="harga" placeholder="Contoh: 25000">
-                </td>
-            </tr>
+                    <div class="form-group">
+                        <label for="harga">Jumlah Pengeluaran</label>
+                        <div class="input-prefix">
+                            <span>Rp</span>
+                            <input type="number" id="harga" name="harga" placeholder="0" min="0" required>
+                        </div>
+                    </div>
+                </div>
 
-            <tr>
-                <td><label for="tanggal">Tanggal Transaksi</label></td>
-                <td>
-                    <input type="date" id="tanggal" name="tanggal">
-                </td>
-            </tr>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal Transaksi</label>
+                        <input type="date" id="tanggal" name="tanggal" required>
+                    </div>
 
-            <tr>
-                <td><label for="pembayaran">Metode Pembayaran</label></td>
-                <td>
-                    <select id="pembayaran" name="pembayaran">
-                        <option value="">Pilih Metode Pembayaran</option>
-                        <option value="cash">Cash</option>
-                        <option value="debit">Debit Card</option>
-                        <option value="credit">Credit Card</option>
-                        <option value="ewallet">E-Wallet</option>
-                        <option value="transfer">Bank Transfer</option>
-                    </select>
-                </td>
-            </tr>
+                    <div class="form-group">
+                        <label for="pembayaran">Metode Pembayaran</label>
+                        <select id="pembayaran" name="pembayaran" required>
+                            <option value="" disabled selected>Pilih Metode...</option>
+                            <option value="cash">Cash</option>
+                            <option value="debit">Debit Card</option>
+                            <option value="credit">Credit Card</option>
+                            <option value="ewallet">E-Wallet</option>
+                            <option value="transfer">Bank Transfer</option>
+                        </select>
+                    </div>
+                </div>
 
-            <tr>
-                <td><label for="catatan">Catatan</label></td>
-                <td>
-                    <textarea id="catatan" name="catatan" placeholder="Tambahkan catatan (opsional)"></textarea>
-                </td>
-            </tr>
-        </table>
+                <div class="form-group">
+                    <label for="catatan">Catatan Tambahan</label>
+                    <textarea id="catatan" name="catatan" rows="3" placeholder="Tambahkan detail opsional di sini..."></textarea>
+                </div>
 
-        <br>
+                <div class="form-actions">
+                    <button type="reset" class="btn-cancel">Batal</button>
+                    <button type="submit" class="btn-submit">Simpan Transaksi</button>
+                </div>
+            </form>
 
-        <button type="submit">Simpan Transaksi</button>
-        <button type="reset">Batal</button>
-
-    </form>
+        </section>
+    </main>
 
 </body>
 </html>

@@ -2,43 +2,59 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>Budgeting App</h1>
         <nav>
-            <a href="dashboard.html">Dashboard</a> |
-            <a href="upload.html">Upload</a> |
-            <a href="login.html">Logout</a>
+            <ul>
+                <li><a href="dashboard.html" class="aktif">Dashboard</a></li>
+                <li><a href="upload.html">Upload</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Dashboard</h2>
+        
 
         <section>
             <h3>Ringkasan</h3>
-            <p>Total Pengeluaran: Rp1.850.000</p>
-            <p>Sisa Budget: Rp1.150.000</p>
+            <div class="ringkasan">
+                <div class="kotak">
+                    <span class="label">Total pengeluaran</span>
+                    <span class="angka">Rp1.850.000</span>
+                </div>
+                <div class="kotak">
+                    <span class="label">Sisa budget</span>
+                    <span class="angka sisa">Rp1.150.000</span>
+                </div>
+            </div>
         </section>
 
         <section>
-            <h3>Transaksi Terbaru</h3>
-            <table border="1">
-                <tr>
-                    <th>Judul</th>
-                    <th>Jumlah</th>
-                </tr>
-                <tr>
-                    <td>Makan Siang</td>
-                    <td>Rp25.000</td>
-                </tr>
-                <tr>
-                    <td>Belanja Bulanan</td>
-                    <td>Rp180.000</td>
-                </tr>
+            <h3>Transaksi terbaru</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pengeluaran</th>
+                        <th>Jumlah</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Makan Siang</td>
+                        <td>Rp25.000</td>
+                    </tr>
+                    <tr>
+                        <td>Belanja Bulanan</td>
+                        <td>Rp180.000</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
     </main>
